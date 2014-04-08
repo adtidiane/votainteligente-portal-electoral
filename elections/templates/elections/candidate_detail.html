@@ -107,10 +107,9 @@
 				<div class="antecedentes col-md-12">
 					<div class="info">
 					{% for background_category in election.can_election.backgroundcategory_set.all %}
+						<h4>{{ background_category.name }}</h4>
 			 			{% for background in background_category.background_set.all %}
-			 				{% for background_candidate in background.backgroundcandidate_set.all %}
-				 				{{background_candidate.value}}
-			 				{% endfor %}
+			 				{{ background.name }} : {% relation_background_candidate candidate background %}<br />
 			 			{% endfor %}
 			 		{% endfor %}
 
