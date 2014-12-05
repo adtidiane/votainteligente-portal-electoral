@@ -29,7 +29,7 @@
 			</p>
 
 		</div>
-		{% if forloop.counter|divisibleby:6 %}
+		{% if forloop.counter|divisibleby:6 and forloop.last != True %}
 			</div>
 		</div>
 		<div class="row">
